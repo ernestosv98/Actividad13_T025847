@@ -1,0 +1,64 @@
+<nav>
+    <div class="nav-wrapper grey darken-2">
+      <a href="#" class="brand-logo center ">Notes</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+  
+      </ul>
+    </div>
+  </nav>
+  
+
+<body class="test">
+    <div class="container">
+      <div class="input-field col s12  l6">
+        <H3>
+          Add a New Note
+        </H3>
+      </div>
+
+      <div class="input-field col s12  l6">
+        <input id="Title" type="text" class="validate" #title>
+        <label for="Title">Title</label>
+      </div>
+
+      <div class="input-field col s12 l6">
+        <input id="Content" type="text" class="validate" #contents>
+        <label for="Content">Content</label>
+      </div>
+
+      <div class="input-field col s12  l6">
+        <a class="waves-effect waves-light btn grey darken-2" (click) = "Add(title, contents)">CREATE NOTE</a>
+      </div>
+
+      <div class="input-field col s12  l6">
+        <H3>
+          Your Notes
+        </H3>
+      </div>
+
+
+
+
+
+  </div>
+
+  <ul class="collapsible">
+
+    <li *ngFor="let titles of Titles, let i = index">
+      <div class="collapsible-header">
+        <i class="material-icons">book</i>
+        {{titles}}
+      </div>
+
+      <div class="collapsible-body">
+        <span> {{Content[i]}} </span>
+      </div>
+    </li>
+  </ul>
+
+  
+</body>
+  
+  
+  
+  
