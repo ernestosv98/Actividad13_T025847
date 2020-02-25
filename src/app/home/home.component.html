@@ -21,10 +21,13 @@
         <label for="Title">Title</label>
       </div>
 
-      <div class="input-field col s12 l6">
-        <input id="Content" type="text" class="validate" #contents>
-        <label for="Content">Content</label>
+      
+  
+      <div class="input-field col s12">
+        <textarea id="textarea1" class="materialize-textarea" #contents></textarea>
+        <label for="textarea1">Textarea</label>
       </div>
+
 
       <div class="input-field col s12  l6">
         <a class="waves-effect waves-light btn grey darken-2" (click) = "Add(title, contents)">CREATE NOTE</a>
