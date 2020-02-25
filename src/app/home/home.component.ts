@@ -27,14 +27,16 @@ export class HomeComponent implements OnInit {
 
   Add(tempTitle: HTMLInputElement, tempContent : HTMLInputElement) : void {
 
-    if(tempTitle.value !== '' || tempContent.value !== ''){
-      this.Titles.push(tempTitle.value)
-      this.Content.push(tempContent.value)
-      tempTitle.value = "";
-      tempContent.value = "";
+    if(tempTitle.value === '' || tempContent.value === ''){
+      alert("Los campos no pueden estar vacios!")
+      
     }
     else{
-      alert("Los campos no pueden estar vacios!")
+      this.Titles.push(tempTitle.value)
+      this.Content.push(tempContent.value)
+
     }
+    tempTitle.value = "";
+    tempContent.value = "";
   }
 }
